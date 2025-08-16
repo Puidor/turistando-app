@@ -1,0 +1,19 @@
+{
+  "categorias": [
+    {
+      "id": "1",
+      "nome": "Praia",
+      "descricao": "Categoria relacionada a praias e atividades aquáticas."
+    },
+    {
+      "id": "2",
+      "nome": "Montanha",
+      "descricao": "Categoria relacionada a montanhas e atividades de montanhismo."
+    },
+    {
+      "nome": "Cultura New",
+      "descricao": "Categoria relacionada a eventos culturais e históricos.",
+      "id": "3"
+    }
+  ]
+}

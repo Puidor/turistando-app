@@ -14,6 +14,16 @@
       "nome": "Cultura New",
       "descricao": "Categoria relacionada a eventos culturais e históricos.",
       "id": "3"
+    },
+    {
+      "id": "11db",
+      "nome": "Bares",
+      "descricao": "Lugares para tomar uma"
+    },
+    {
+      "id": "476d",
+      "nome": "Secretarias",
+      "descricao": "Lugares para criar atas"
     }
   ]
 }

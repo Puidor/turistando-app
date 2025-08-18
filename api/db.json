@@ -25,5 +25,23 @@
       "nome": "Secretarias",
       "descricao": "Lugares para criar atas"
     }
+  ],
+  "lugares": [
+    {
+      "id": "3aa5",
+      "nome": "Bar do zé",
+      "categoria": "11db",
+      "localizacao": "Maranhão",
+      "urlFoto": "foto",
+      "avaliacao": "4"
+    },
+    {
+      "id": "c20a",
+      "nome": "Praia do meio",
+      "categoria": "1",
+      "localizacao": "São Luis",
+      "urlFoto": "Foto",
+      "avaliacao": "5"
+    }
   ]
 }

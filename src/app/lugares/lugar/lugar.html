@@ -1,0 +1,118 @@
+<div class="p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg mt-6">
+  <h2 class="text-2x1 font-semibold text-gray-700 mb-4">Novo Lugar</h2>
+
+  <form id="lugarForm" [formGroup]="camposForm" (ngSubmit)="salvar()">
+    <!-- Campo Nome do lugar -->
+    <div class="mb-4">
+      <label for="nome" class="block text-gray-600 font-medium mb-2"
+        >Nome do lugar</label
+      >
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        formControlName="nome"
+        placeholder="Ex: Cristo Redentor, Praia do Forte"
+        class="w-full p3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+        required
+      />
+      <span class="text-red-500 text-sm" *ngIf="isCampoIvalido('nome')">
+        Campo obrigatório
+      </span>
+    </div>
+
+    <!-- Campo Categoria -->
+    <div class="mb-4">
+      <label for="nome" class="block text-gray-600 font-medium mb-2"
+        >Categoria</label
+      >
+      <select
+        id="categoria"
+        name="categoria"
+        formControlName="categoria"
+        class="w-full p3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+        required
+      >
+        <option value="" selected>Selecione uma categoria</option>
+        <option
+          *ngFor="let categoria of categoriasModel"
+          [value]="categoria.id"
+        >
+          {{ categoria.nome }}
+        </option>
+      </select>
+      <span class="text-red-500 text-sm" *ngIf="isCampoIvalido('categoria')">
+        Campo obrigatório
+      </span>
+    </div>
+
+    <!-- Campo Localização -->
+    <div class="mb-4">
+      <label for="localizacao" class="block text-gray-600 font-medium mb-2"
+        >Localização</label
+      >
+      <input
+        type="text"
+        id="localizacao"
+        name="localizacao"
+        formControlName="localizacao"
+        placeholder="Ex: Maranhão, Rio de Janeiro"
+        class="w-full p3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+        required
+      />
+      <span class="text-red-500 text-sm" *ngIf="isCampoIvalido('localizacao')">
+        Campo obrigatório
+      </span>
+    </div>
+
+    <!-- Campo Url Foto -->
+    <div class="mb-4">
+      <label for="localizacao" class="block text-gray-600 font-medium mb-2"
+        >Url da foto</label
+      >
+      <input
+        type="text"
+        id="urlFoto"
+        name="urlFoto"
+        formControlName="urlFoto"
+        placeholder="Ex: https://example.com/foto.jpg"
+        class="w-full p3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+        required
+      />
+      <span class="text-red-500 text-sm" *ngIf="isCampoIvalido('urlFoto')">
+        Campo obrigatório
+      </span>
+    </div>
+
+    <!-- Campo avaliacao -->
+    <div class="mb-4">
+      <label for="avaliacao" class="block text-gray-600 font-medium mb-2"
+        >Avaliação</label
+      >
+      <select
+        id="avaliacao"
+        name="avaliacao"
+        formControlName="avaliacao"
+        class="w-full p3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+        required
+      >
+        <option value="" selected>Selecione uma avaliação</option>
+        <option value="1">1 Estrela</option>
+        <option value="2">2 Estrelas</option>
+        <option value="3">3 Estrelas</option>
+        <option value="4">4 Estrelas</option>
+        <option value="5">5 Estrelas</option>
+      </select>
+      <span class="text-red-500 text-sm" *ngIf="isCampoIvalido('avaliacao')">
+        Campo obrigatório
+      </span>
+    </div>
+
+    <button
+      type="submit"
+      class="w-full bg-blue-500 text-white p-3 rounded hover:bg-blue-600 transition"
+    >
+      Cadastrar Lugar
+    </button>
+  </form>
+</div>
